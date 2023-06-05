@@ -11,7 +11,7 @@ struct tunel
 
 
 int main(){
-    int S, T, P, N, sa;
+    int S, T, P, N, sa, qntdVencedores=0;
     bool possivel=false;
 
     cin >> S >> T;
@@ -38,12 +38,11 @@ int main(){
 
         for (int l = 0; l < N; l++)
         {
-            if(sequencia[l]){
-
+        if((sequencia[l] == vetor[i].a || sequencia[l] == vetor[l].b) && (sequencia[l+1] == vetor[l].a || sequencia[l+1] == vetor[l].b)){
+                qntdVencedores++;
             }
         }
-        
-        
-    }
-      
+    }    
+
+    cout << qntdVencedores << endl;  
 } 
